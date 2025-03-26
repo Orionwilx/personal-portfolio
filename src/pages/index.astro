@@ -1,5 +1,5 @@
 ---
-import Welcome from "../components/Welcome.astro";
+import Badge from "../components/badge.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,5 +7,17 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <Welcome />
+  <main>
+    <section class="w-full lg:[740px] mx-auto py-44">
+      <h1 class="text-white text-5xl font-bold justify-center flex-row gab-4">
+        Hey, soy orion <div class="flex justify-center items-center">
+          <Badge>Disponible para trabajar</Badge>
+        </div>
+      </h1>
+      <h2>
+        +3 anios de experiencia. Desarrolador web de colombia. Expecializado en
+        en crear aplicaciones unicas
+      </h2>
+    </section>
+  </main>
 </Layout>
