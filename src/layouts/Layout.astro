@@ -11,26 +11,34 @@ import "@fontsource/onest";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>Portfolio Orion Programador y Desarrollador Web</title>
   </head>
   <body>
-    <Header />
-    <slot />
+    <div class="relative h-full w-full bg-slate-950">
+      <div
+        class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
+      >
+      </div><div
+        class="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
+      >
+      </div>
+      <Header />
+      <slot />
+    </div>
   </body>
-</html>
 
-<style>
-  :root {
-    color-scheme: light dark;
-  }
-  html {
-    font-family: "Onest", sans-serif;
-  }
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #202020;
-    min-height: 100vh;
-  }
-</style>
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+    html {
+      font-family: "Onest", sans-serif;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      background: #202020;
+      min-height: 100vh;
+    }
+  </style>
+</html>

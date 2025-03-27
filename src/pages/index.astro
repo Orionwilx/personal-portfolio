@@ -1,23 +1,56 @@
 ---
-import Badge from "../components/badge.astro";
+import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedinIco from "../icons/Linkedin.astro";
+import Githubico from "../icons/Github.astro";
 import Layout from "../layouts/Layout.astro";
+import MailIco from "../icons/Mail.astro";
+import Experience from "../components/Experience.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
+<Layout
+  title="Porfolio Orion, Desarrollador y Programador Web "
+  description="Contrata a Orion, Desarrollador y Programador Web"
+>
   <main>
-    <section class="w-full lg:[740px] mx-auto py-44">
-      <h1 class="text-white text-5xl font-bold justify-center flex-row gab-4">
-        Hey, soy orion <div class="flex justify-center items-center">
-          <Badge>Disponible para trabajar</Badge>
-        </div>
+    <SectionContainer class="w-full lg:w-[740px] mx-auto py-44">
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+        Hey, soy orion
+        <a
+          class="flex justify-center items-center"
+          href="https://linkedin.com/in/wilmanzuleta"
+          target="_blank"><Badge>Disponible para trabajar</Badge></a
+        >
       </h1>
-      <h2>
-        +3 anios de experiencia. Desarrolador web de colombia. Expecializado en
-        en crear aplicaciones unicas
+      <h2 class="text-2xl text-wrap pb-4">
+        <span> +2 años de experiencia.</span>
+        <span class="text-yellow-200/85">Desarrolador web de colombia.</span>
+        <span class="opacity-70"
+          >Expecializado en en crear aplicaciones unicas.</span
+        >
       </h2>
-    </section>
+
+      <nav class="flex gap-x-4">
+        <SocialPill href="https://linkedin.com/in/wilmanzuleta">
+          <LinkedinIco class="size-6" />
+          Linkedin
+        </SocialPill>
+        <SocialPill href="https://github.com/orionwilx">
+          <Githubico class="size-6" />
+          Github
+        </SocialPill>
+        <SocialPill>
+          <MailIco class="size-6" />
+          wilman3d@hotmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer class="w-full lg:w-[740px] mx-auto py-44">
+      <Experience />
+    </SectionContainer>
   </main>
 </Layout>
