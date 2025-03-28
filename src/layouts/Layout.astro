@@ -28,13 +28,21 @@ import "@fontsource/onest";
     :root {
       color-scheme: light dark;
     }
+    * {
+    }
     html {
       font-family: "Onest", sans-serif;
+      scroll-behavior: smooth;
     }
     body {
       display: flex;
       flex-direction: column;
       background: #202020;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
     }
   </style>
 </html>
