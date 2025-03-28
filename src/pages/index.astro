@@ -7,6 +7,7 @@ import Githubico from "../icons/Github.astro";
 import Layout from "../layouts/Layout.astro";
 import MailIco from "../icons/Mail.astro";
 import Experience from "../components/Experience.astro";
+import Briefcase from "../icons/Briefcase.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -17,7 +18,7 @@ import Experience from "../components/Experience.astro";
   description="Contrata a Orion, Desarrollador y Programador Web"
 >
   <main>
-    <SectionContainer class="w-full lg:w-[740px] mx-auto py-44">
+    <SectionContainer class="py-30">
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
         Hey, soy orion
         <a
@@ -49,7 +50,12 @@ import Experience from "../components/Experience.astro";
         </SocialPill>
       </nav>
     </SectionContainer>
-    <SectionContainer class="w-full lg:w-[740px] mx-auto py-44">
+    <SectionContainer>
+      <h2
+        class="text-2xl font-semibold pb-4 flex flex-row gap-x-4 items-center"
+      >
+        <Briefcase class="size-6" /> Experiencia laboral
+      </h2>
       <Experience />
     </SectionContainer>
   </main>
