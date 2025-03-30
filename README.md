@@ -1,48 +1,64 @@
-# Astro Starter Kit: Basics
+# Portfolio de Wilman Zuleta - Desarrollador Web Full Stack
 
-```sh
-npm create astro@latest -- --template basics
-```
+<img alt="Banner del Portfolio" src="https://img.shields.io/badge/Portfolio-Wilman_Zuleta-8A2BE2?style=for-the-badge">
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 👨‍💻 Sobre Mí
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Desarrollador Web Full Stack con más de 2 años de experiencia creando aplicaciones web innovadoras y soluciones tecnológicas escalables. Especialista en arquitecturas basadas en microservicios y apasionado del desarrollo backend.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+<img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white">
+<img alt="GitHub" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white">
+<img alt="Email" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&amp;logo=gmail&amp;logoColor=white">
 
-## 🚀 Project Structure
+## 🚀 Tecnologías
 
-Inside of your Astro project, you'll see the following folders and files:
+<img alt="Java" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&amp;logo=openjdk&amp;logoColor=white">
+<img alt="Spring Boot" src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&amp;logo=spring-boot&amp;logoColor=white">
+<img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&amp;logo=javascript&amp;logoColor=black">
+<img alt="SQL Server" src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&amp;logo=microsoft-sql-server&amp;logoColor=white">
+<img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&amp;logo=mongodb&amp;logoColor=white">
+<img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&amp;logo=docker&amp;logoColor=white">
+<img alt="Astro" src="https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&amp;logo=astro&amp;logoColor=white">
+<img alt="TailwindCSS" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&amp;logo=tailwind-css&amp;logoColor=white">
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🔍 Proyectos Destacados
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+MicroCommerce - Plataforma E-commerce basada en Microservicios
+Plataforma de comercio electrónico construida con una arquitectura de microservicios usando Spring Boot. Este sistema permite:
 
-## 🧞 Commands
+Escalabilidad y resiliencia de componentes individuales
+Gestión independiente de cada microservicio
+Integración con múltiples bases de datos (SQL Server y MongoDB)
+Despliegue en contenedores Docker
 
-All commands are run from the root of the project, from a terminal:
+Project Manager CIDS - Universidad del Magdalena
+Desarrollo del sistema de gestión de proyectos para el Centro de Investigación y Desarrollo de Software (CIDS):
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Diseño e implementación de base de datos
+Desarrollo de API RESTful con .NET Core
+Integración con Entity Framework
+Interfaces de usuario intuitivas y responsivas
 
-## 👀 Want to learn more?
+## 💼 Experiencia Profesional
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Desarrollador FullStack | Universidad del Magdalena CIDS | Dic 2024 - Actualidad
+
+Desarrollo y mantenimiento de APIs RESTful con .NET Core
+Integración de Entity Framework con bases de datos
+Colaboración en equipos interdisciplinarios para soluciones tecnológicas robustas
+
+### 🎓 Formación
+
+Ingeniería de Sistemas | Universidad del Magdalena | En curso
+
+### 📫 Contacto
+
+¿Interesado en trabajar juntos? ¡Contáctame!
+
+📧 Email: wilman3d@hotmail.com
+
+💼 LinkedIn: wilmanzuleta
+
+🌐 GitHub: orionwilx
+
+#### Este portfolio fue construido con Astro y TailwindCSS
