@@ -1,4 +1,58 @@
 ---
+import SpringBootIcon from "../icons/SpringBoot.astro";
+import SqlServerIcon from "../icons/SqlServer.astro";
+import DockerIcon from "../icons/Docker.astro";
+import MongoIcon from "../icons/Mongo.astro";
+import JavaIcon from "../icons/Java.astro";
+import Github from "../icons/Github.astro";
+
+const TAGS = {
+  REACT: {
+    name: "React",
+    class: "",
+    icon: "react",
+  },
+  NODE: {
+    name: "Node.js",
+    class: "",
+    icon: "nodejs",
+  },
+  SPRING_BOOT: {
+    name: "Spring Boot",
+    class: "bg-[#1b4900c0] text-white",
+    icon: SpringBootIcon,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-[#dfdfdf] text-black",
+    icon: JavaIcon,
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-[#002d47] text-white",
+    icon: DockerIcon,
+  },
+  SQL_SERVER: {
+    name: "SQL Server",
+    class: "bg-[#2f0404] text-white",
+    icon: SqlServerIcon,
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-[#275f18] text-white",
+    icon: MongoIcon,
+  },
+  GITHUB: {
+    name: "GitHub",
+    class: "bg-[#dfdfdf] text-black",
+    icon: Github,
+  },
+  GIT: {
+    name: "Git",
+    class: "",
+    icon: "git",
+  },
+};
 const projects = [
   {
     title: "MicroCommerce Spring Boot",
@@ -6,14 +60,21 @@ const projects = [
       "E-commerce system based on microservices architecture built with Spring Boot. This architecture enables scalability, resilience, and independent development of each component.",
     image: "/src/assets/curso-microservicios-ibm-coursera.webp",
     link: "https://github.com/Orionwilx/MicroCommerce-SpringBoot",
-    tags: ["Spring Boot", "Docker", "Microservices", "SQL Server", "MongoDB"],
+    tags: [
+      TAGS.SPRING_BOOT,
+      TAGS.DOCKER,
+      TAGS.SQL_SERVER,
+      TAGS.MONGODB,
+      TAGS.JAVA,
+      TAGS.GITHUB,
+    ],
   },
   {
     title: "Project 2",
     description: "Description of project 2.",
     image: "/src/assets/curso-microservicios-ibm-coursera.webp",
     link: "https://github.com/Orionwilx/MicroCommerce-SpringBoot",
-    tags: ["React", "Node.js"],
+    tags: [TAGS.SPRING_BOOT],
   },
   // Add more projects as needed
 ];
@@ -24,10 +85,10 @@ const projects = [
     <article class=" shadow-md rounded-lg p-6 mb-6">
       <img
         src={image}
-        alt={title}
-        class="size-80 object-cover rounded-lg mb-4 "
+        alt={`Captura de pantalla del proyecto${title}`}
+        class="max-w-max h-60 object-cover rounded-lg mb-4 shadow-2xl shadow-white/10"
       />
-      <h3 class="text-xl font-semibold text-gray-300 mb-2">{title}</h3>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
       <p class="text-gray-400 mb-4">{description}</p>
       <a
         href={link}
@@ -50,10 +111,15 @@ const projects = [
           />
         </svg>
       </a>
-      <ul class="mt-2">
+      <ul class="flex gap-2 flex-row mb-4">
         {tags.map((tag) => (
-          <li class="inline-block bg-gray-200 text-gray-700 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded">
-            {tag}
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-3 px-2`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
           </li>
         ))}
       </ul>
