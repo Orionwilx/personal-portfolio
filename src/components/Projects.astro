@@ -4,19 +4,23 @@ import SqlServerIcon from "../icons/SqlServer.astro";
 import DockerIcon from "../icons/Docker.astro";
 import MongoIcon from "../icons/Mongo.astro";
 import JavaIcon from "../icons/Java.astro";
-import Github from "../icons/Github.astro";
-import Layout from "../layouts/Layout.astro";
+import GithubIcon from "../icons/Github.astro";
+import javaScriptIcon from "../icons/JavaScript.astro";
+import ReactIcon from "../icons/React.astro";
+import NodeIcon from "../icons/Nodejs.astro";
+import GitIcon from "../icons/Git.astro";
+import { Image } from "astro:assets";
 
 const TAGS = {
   REACT: {
     name: "React",
-    class: "",
-    icon: "react",
+    class: "bg-[#dfdfdf] text-black",
+    icon: ReactIcon,
   },
   NODE: {
     name: "Node.js",
-    class: "",
-    icon: "nodejs",
+    class: "bg-[#275f18] text-white",
+    icon: NodeIcon,
   },
   SPRING_BOOT: {
     name: "Spring Boot",
@@ -46,12 +50,17 @@ const TAGS = {
   GITHUB: {
     name: "GitHub",
     class: "bg-[#dfdfdf] text-black",
-    icon: Github,
+    icon: GithubIcon,
   },
   GIT: {
     name: "Git",
-    class: "",
-    icon: "git",
+    class: "bg-[#dfdfdf] text-black",
+    icon: GitIcon,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: " bg-[#aba05b] text-black",
+    icon: javaScriptIcon,
   },
 };
 const projects = [
@@ -69,6 +78,14 @@ const projects = [
       TAGS.JAVA,
       TAGS.GITHUB,
     ],
+  },
+  {
+    title: "Tic Tac Toe React",
+    description:
+      "A simple Tic Tac Toe game built with React. It allows two players to play against each other in a classic game of Tic Tac Toe.",
+    image: "https://cdn-icons-png.flaticon.com/512/2911/2911080.png",
+    link: "https://triki-react-orion.netlify.app/",
+    tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.GITHUB, TAGS.GIT, TAGS.NODE],
   },
   // Add more projects as needed
 ];
