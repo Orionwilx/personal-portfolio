@@ -9,12 +9,12 @@ import javaScriptIcon from "../icons/JavaScript.astro";
 import ReactIcon from "../icons/React.astro";
 import NodeIcon from "../icons/Nodejs.astro";
 import GitIcon from "../icons/Git.astro";
-import { Image } from "astro:assets";
+import TailwindIcon from "../icons/Tailwind.astro";
 
 const TAGS = {
   REACT: {
     name: "React",
-    class: "bg-[#dfdfdf] text-black",
+    class: "bg-[#002d47] text-white",
     icon: ReactIcon,
   },
   NODE: {
@@ -29,7 +29,7 @@ const TAGS = {
   },
   JAVA: {
     name: "Java",
-    class: "bg-[#dfdfdf] text-black",
+    class: "bg-[#FEFEFE] text-black",
     icon: JavaIcon,
   },
   DOCKER: {
@@ -49,27 +49,33 @@ const TAGS = {
   },
   GITHUB: {
     name: "GitHub",
-    class: "bg-[#dfdfdf] text-black",
+    class: "bg-[#091e3f] text-white",
     icon: GithubIcon,
   },
   GIT: {
     name: "Git",
-    class: "bg-[#dfdfdf] text-black",
+    class: "bg-[#5e2217] text-white",
     icon: GitIcon,
   },
   JAVASCRIPT: {
     name: "JavaScript",
-    class: " bg-[#aba05b] text-black",
+    class: " bg-[#aba05b] text-white",
     icon: javaScriptIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#002d47] text-white",
+    icon: TailwindIcon,
   },
 };
 const projects = [
   {
     title: "MicroCommerce Spring Boot",
     description:
-      "E-commerce system based on microservices architecture built with Spring Boot. This architecture enables scalability, resilience, and independent development of each component.",
+      "Sistema de e-commerce robusto y escalable, desarrollado con Spring Boot bajo una arquitectura de microservicios. Esto garantiza alta disponibilidad, resiliencia y facilita el desarrollo y despliegue independiente de cada módulo funcional.",
     image: "/curso-microservicios-ibm-coursera.webp",
     link: "https://github.com/Orionwilx/MicroCommerce-SpringBoot",
+    github: "https://github.com/Orionwilx/search-movie-react",
     tags: [
       TAGS.SPRING_BOOT,
       TAGS.DOCKER,
@@ -82,17 +88,37 @@ const projects = [
   {
     title: "Tic Tac Toe React",
     description:
-      "A simple Tic Tac Toe game built with React. It allows two players to play against each other in a classic game of Tic Tac Toe.",
-    image: "https://cdn-icons-png.flaticon.com/512/2911/2911080.png",
+      "Clásico juego de Tic Tac Toe (Tres en Raya) implementado con React. Una aplicación interactiva que permite a dos jugadores competir en tiempo real, demostrando el manejo de estado y eventos en React.",
+    image:
+      "https://github.com/Orionwilx/React-learnProjects/raw/master/triqui-react/Screenshot%202025-04-06%20134408.png",
     link: "https://triki-react-orion.netlify.app/",
+    github:
+      "https://github.com/Orionwilx/React-learnProjects/tree/master/triqui-react",
     tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.GITHUB, TAGS.GIT, TAGS.NODE],
+  },
+  {
+    title: "Cine Search",
+    description:
+      "Aplicación web interactiva para buscar películas y consultar sus detalles. Se conecta a la API de OMDb para obtener información actualizada, mostrando el consumo de APIs externas en una interfaz amigable creada con React.",
+    image:
+      "https://private-user-images.githubusercontent.com/105987929/436301939-05f08444-46dc-422b-abc3-a8e6ac9727aa.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDUzNjQ1MDIsIm5iZiI6MTc0NTM2NDIwMiwicGF0aCI6Ii8xMDU5ODc5MjkvNDM2MzAxOTM5LTA1ZjA4NDQ0LTQ2ZGMtNDIyYi1hYmMzLWE4ZTZhYzk3MjdhYS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDIyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQyMlQyMzIzMjJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04MTJhYTI4ZDNmZGU2OTViZjM3Nzg2NjM5YWEyNzBjZTQwZDg4YTQxOWRjOWIzYWI1NjA2YjRiMzBjMWNkNzljJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.yfsnVaZ1E_XQEVitbp9hzP1Wjhy-XQ6ewghhpN-2b1c",
+    link: "https://movie-searchorion.netlify.app/",
+    github: "https://github.com/Orionwilx/search-movie-react",
+    tags: [
+      TAGS.REACT,
+      TAGS.JAVASCRIPT,
+      TAGS.TAILWIND,
+      TAGS.GITHUB,
+      TAGS.GIT,
+      TAGS.NODE,
+    ],
   },
   // Add more projects as needed
 ];
 ---
 
 {
-  projects.map(({ title, description, image, link, tags }) => (
+  projects.map(({ title, description, image, link, github, tags }) => (
     <article class=" shadow-md rounded-lg p-6 mb-6">
       <img
         src={image}
@@ -104,6 +130,27 @@ const projects = [
       <a
         href={link}
         class="inline-flex items-center px-4 py-2 mb-3 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+      >
+        Ver Demo{" "}
+        <svg
+          class="w-3 h-3 ms-2 rtl:rotate-180"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 14 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 5h12m0 0L9 1m4 4L9 9"
+          />
+        </svg>
+      </a>
+      <a
+        href={github}
+        class="inline-flex items-center px-4 py-2 mb-3 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700 ml-4"
       >
         Ver Proyecto{" "}
         <svg
@@ -126,7 +173,7 @@ const projects = [
         {tags.map((tag) => (
           <li>
             <span
-              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-3 px-2`}
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-3.5 px-4`}
             >
               <tag.icon class="size-4" />
               {tag.name}
