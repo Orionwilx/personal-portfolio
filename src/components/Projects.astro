@@ -1,6 +1,5 @@
 ---
 import SpringBootIcon from "../icons/SpringBoot.astro";
-import SqlServerIcon from "../icons/SqlServer.astro";
 import DockerIcon from "../icons/Docker.astro";
 import MongoIcon from "../icons/Mongo.astro";
 import JavaIcon from "../icons/Java.astro";
@@ -10,8 +9,38 @@ import ReactIcon from "../icons/React.astro";
 import NodeIcon from "../icons/Nodejs.astro";
 import GitIcon from "../icons/Git.astro";
 import TailwindIcon from "../icons/Tailwind.astro";
+import LaravelIcon from "../icons/Laravel.astro";
+import PhpIcon from "../icons/Php.astro";
+import PostgreSQLIcon from "../icons/PostgreSQL.astro";
+import TypeScriptIcon from "../icons/TypeScript.astro";
+import AwsIcon from "../icons/Aws.astro";
 
 const TAGS = {
+  LARAVEL: {
+    name: "Laravel",
+    class: "bg-[#4a1410] text-white",
+    icon: LaravelIcon,
+  },
+  PHP: {
+    name: "PHP",
+    class: "bg-[#2e3359] text-white",
+    icon: PhpIcon,
+  },
+  AWS: {
+    name: "AWS",
+    class: "bg-[#3d2a00] text-white",
+    icon: AwsIcon,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#0b2f4f] text-white",
+    icon: TypeScriptIcon,
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    class: "bg-[#1d3557] text-white",
+    icon: PostgreSQLIcon,
+  },
   REACT: {
     name: "React",
     class: "bg-[#002d47] text-white",
@@ -36,11 +65,6 @@ const TAGS = {
     name: "Docker",
     class: "bg-[#002d47] text-white",
     icon: DockerIcon,
-  },
-  SQL_SERVER: {
-    name: "SQL Server",
-    class: "bg-[#2f0404] text-white",
-    icon: SqlServerIcon,
   },
   MONGODB: {
     name: "MongoDB",
@@ -68,22 +92,55 @@ const TAGS = {
     icon: TailwindIcon,
   },
 };
+
 const projects = [
+  {
+    title: "Plataforma SaaS de gestión de mantenimiento",
+    badge: "Proyecto propio · En producción",
+    description:
+      "Plataforma web para empresas de mantenimiento industrial: clientes, hojas de vida de equipos, órdenes de trabajo, técnicos y reportes en PDF y Excel, con panel administrativo, portal para clientes y control de acceso por roles. Arquitectura de una instancia aislada por cliente desplegada en AWS. Ya opera con su primer cliente. Código privado.",
+    tags: [TAGS.LARAVEL, TAGS.PHP, TAGS.TAILWIND, TAGS.AWS, TAGS.GIT],
+  },
+  {
+    title: "Calculadora de métodos numéricos",
+    description:
+      "Aplicación web para resolver problemas de métodos numéricos con gráficas interactivas. Desarrollada con React, TypeScript y Vite, con manejo de estado en Zustand, cálculo con math.js y visualización con Recharts.",
+    image:
+      "https://image.thum.io/get/width/1200/crop/750/https://calculadora-nmerica.vercel.app",
+    link: "https://calculadora-nmerica.vercel.app",
+    github: "https://github.com/Orionwilx/calculadora-nmerica",
+    tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.GITHUB],
+  },
+  {
+    title: "Laravel + React (Inertia)",
+    description:
+      "Aplicación full-stack construida como prueba técnica: backend en Laravel con Inertia.js y frontend en React con TypeScript, componentes accesibles con Radix UI y estilos en Tailwind CSS.",
+    github: "https://github.com/Orionwilx/laravel-technical-test",
+    tags: [TAGS.LARAVEL, TAGS.REACT, TAGS.TYPESCRIPT, TAGS.TAILWIND],
+  },
   {
     title: "MicroCommerce Spring Boot",
     description:
       "Sistema de e-commerce robusto y escalable, desarrollado con Spring Boot bajo una arquitectura de microservicios. Esto garantiza alta disponibilidad, resiliencia y facilita el desarrollo y despliegue independiente de cada módulo funcional.",
     image: "/curso-microservicios-ibm-coursera.webp",
-    link: "https://github.com/Orionwilx/MicroCommerce-SpringBoot",
     github: "https://github.com/Orionwilx/MicroCommerce-SpringBoot",
     tags: [
       TAGS.SPRING_BOOT,
-      TAGS.DOCKER,
-      TAGS.SQL_SERVER,
-      TAGS.MONGODB,
       TAGS.JAVA,
-      TAGS.GITHUB,
+      TAGS.POSTGRESQL,
+      TAGS.MONGODB,
+      TAGS.DOCKER,
     ],
+  },
+  {
+    title: "Cine Search",
+    description:
+      "Aplicación web interactiva para buscar películas y consultar sus detalles. Se conecta a la API de OMDb para obtener información actualizada, mostrando el consumo de APIs externas en una interfaz amigable creada con React.",
+    image:
+      "https://github.com/user-attachments/assets/05f08444-46dc-422b-abc3-a8e6ac9727aa",
+    link: "https://movie-searchorion.netlify.app/",
+    github: "https://github.com/Orionwilx/search-movie-react",
+    tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.TAILWIND, TAGS.GITHUB],
   },
   {
     title: "Tic Tac Toe React",
@@ -94,87 +151,54 @@ const projects = [
     link: "https://triki-react-orion.netlify.app/",
     github:
       "https://github.com/Orionwilx/React-learnProjects/tree/master/triqui-react",
-    tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.GITHUB, TAGS.GIT, TAGS.NODE],
+    tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.GITHUB],
   },
-  {
-    title: "Cine Search",
-    description:
-      "Aplicación web interactiva para buscar películas y consultar sus detalles. Se conecta a la API de OMDb para obtener información actualizada, mostrando el consumo de APIs externas en una interfaz amigable creada con React.",
-    image:
-      "https://private-user-images.githubusercontent.com/105987929/436301939-05f08444-46dc-422b-abc3-a8e6ac9727aa.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDU2MzUwMDEsIm5iZiI6MTc0NTYzNDcwMSwicGF0aCI6Ii8xMDU5ODc5MjkvNDM2MzAxOTM5LTA1ZjA4NDQ0LTQ2ZGMtNDIyYi1hYmMzLWE4ZTZhYzk3MjdhYS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDI2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQyNlQwMjMxNDFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02MGJlODI2ZWU0MGM0YWRmOTNlMTBhMThkMzg3OGM1Yzc3NTM1Nzg1YjFiYmVlZjQyMTVmYmExYzJmMDdiZDhkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.5uo1LgH3byJXWNND7Pa9oOkxg8fZwAg2qHPK-hYUKwo",
-    link: "https://movie-searchorion.netlify.app/",
-    github: "https://github.com/Orionwilx/search-movie-react",
-    tags: [
-      TAGS.REACT,
-      TAGS.JAVASCRIPT,
-      TAGS.TAILWIND,
-      TAGS.GITHUB,
-      TAGS.GIT,
-      TAGS.NODE,
-    ],
-  },
-  // Add more projects as needed
 ];
+
+const buttonClass =
+  "inline-flex items-center px-4 py-2 mb-3 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700";
 ---
 
 {
-  projects.map(({ title, description, image, link, github, tags }) => (
-    <article class=" shadow-md rounded-lg p-6 mb-6">
-      <img
-        src={image}
-        alt={`Captura de pantalla del proyecto ${title}`}
-        class="max-w-max h-60 object-cover rounded-lg mb-4 shadow-2xl shadow-white/10"
-      />
+  projects.map(({ title, badge, description, image, link, github, tags }) => (
+    <article class="shadow-md rounded-lg p-6 mb-6">
+      {image && (
+        <img
+          src={image}
+          alt={`Captura de pantalla del proyecto ${title}`}
+          loading="lazy"
+          class="w-full max-w-2xl h-60 object-cover object-top rounded-lg mb-4 shadow-2xl shadow-white/10"
+        />
+      )}
       <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      {badge && (
+        <p class="text-xs font-mono uppercase tracking-wide text-yellow-100/70 mb-2">
+          {badge}
+        </p>
+      )}
       <p class="text-gray-400 mb-4">{description}</p>
-      <a
-        href={link}
-        class="inline-flex items-center px-4 py-2 mb-3 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-      >
-        Ver Demo{" "}
-        <svg
-          class="w-3 h-3 ms-2 rtl:rotate-180"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 14 10"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M1 5h12m0 0L9 1m4 4L9 9"
-          />
-        </svg>
-      </a>
-      <a
-        href={github}
-        class="inline-flex items-center px-4 py-2 mb-3 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700 ml-4"
-      >
-        Ver Proyecto{" "}
-        <svg
-          class="w-3 h-3 ms-2 rtl:rotate-180"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 14 10"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M1 5h12m0 0L9 1m4 4L9 9"
-          />
-        </svg>
-      </a>
-      <ul class="flex gap-2 flex-row mb-4">
+      <div class="flex flex-wrap gap-4">
+        {link && (
+          <a href={link} target="_blank" rel="noopener" class={buttonClass}>
+            Ver demo
+            <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+            </svg>
+          </a>
+        )}
+        {github && (
+          <a href={github} target="_blank" rel="noopener" class={buttonClass}>
+            Ver código
+            <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+            </svg>
+          </a>
+        )}
+      </div>
+      <ul class="flex flex-wrap gap-2 flex-row mb-4">
         {tags.map((tag) => (
           <li>
-            <span
-              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-3.5 px-4`}
-            >
+            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-3.5 px-4`}>
               <tag.icon class="size-4" />
               {tag.name}
             </span>
